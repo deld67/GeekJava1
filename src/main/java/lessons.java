@@ -1,5 +1,5 @@
 public class lessons {
-
+/* Тарасов Сергей. Домашнее задание № 1*/
     static double calculate(double a, double b, double c, double d) {
         return  a* (b+c/d);
     }
@@ -29,6 +29,7 @@ public class lessons {
     static  void  prChSingNum(boolean result, double a){
         System.out.println("Число "+a+" "+(result == true ? "целое":"дробное")+" ("+result+")." );
     }
+
 
     static  void  prHello(String name){
         if (name.trim().length() == 0){
