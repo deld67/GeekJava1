@@ -10,11 +10,20 @@ public class HomeWork {
     * output: 4
     * use regex, split, lowerCase, replace methods
     * */
-    public int countOfWordsFromDictionaryInString(String input, String [] dictionary) {
+    public static  int countOfWordsFromDictionaryInString(String input, String [] dictionary) {
         //посчитать все слова из словаря в input
         //если одно слово встречается 5 раз его нужно посчитать 5 раз
         // TODO: 1/21/2020
-        return 0;
+        int cnt_words = 0;
+        String [] words = input.trim().toLowerCase().split(" ");
+        for (String word : dictionary) {
+            for (String wordS : words) {
+                if (wordS.replaceAll("\\W", "").equals(word.toLowerCase())) {
+                    cnt_words++;
+                }
+            }
+        }
+        return cnt_words;
     }
     /* example:
      * input: [1,0,3,17,2,7,14,1,1,7], K = 6
@@ -48,4 +57,12 @@ public class HomeWork {
     public void wordsGame() {
         // TODO: 20.01.2020  
     }
+
+    public static void main(String[] args) {
+        String str = "Mama mila ramu, Ramu mila mama!!!";
+        String [] words = new String[]{"mama", "ramu"};
+        System.out.println(countOfWordsFromDictionaryInString(str, words));
+        
+    }
+
 }
