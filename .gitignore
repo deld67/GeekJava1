@@ -3,3 +3,5 @@ tmp/*
 target/*
 .idea/*
 src/test/*
+codestyles/*
+_windows/*  
