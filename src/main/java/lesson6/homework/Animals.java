@@ -1,11 +1,14 @@
 package lesson6.homework;
 
+
 public abstract class Animals {
     String type;
     double MaxLen;
+    String name;
 
-    public Animals(String type) {
+    public Animals(String type, String name) {
         this.type = type;
+        this.name = name;
     }
 
     static final String ANSI_RESET = "\u001B[0m";
@@ -24,9 +27,15 @@ public abstract class Animals {
 
     void printColorLine(int cnt, boolean res){
         for (int i = 0; i < cnt; i++) {
-            System.out.printf(Color[i]+"===");
+            try {
+                // в течение 500 миллисекунд
+                Thread.sleep(500);
+                System.out.printf(Color[i]+"===");
+            } catch (Exception e) {
+                System.out.println(e);
+            }
         }
-        System.out.printf( " ->"+res+ANSI_RESET+" ");
+        System.out.println( " ->"+res+ANSI_RESET+" ");
     }
 
 
@@ -75,7 +84,11 @@ public abstract class Animals {
         }
     }
 
-    public void getType() {
-        System.out.println(type);
+    public String getType() {
+        return  type;
+    }
+
+    public String getName() {
+        return name;
     }
 }

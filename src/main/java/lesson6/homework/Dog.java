@@ -1,8 +1,8 @@
 package lesson6.homework;
 
 public class Dog extends Animals {
-    public Dog(String type) {
-        super(type);
+    public Dog(String type, String name) {
+        super(type, name);
     }
 
     //(бег: кот 200 м., собака 500 м.; прыжок: кот 2 м., собака 0.5 м.; плавание: кот не умеет плавать, собака 10 м.`
